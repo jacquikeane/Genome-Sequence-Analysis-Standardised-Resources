@@ -9,21 +9,6 @@ body {
   font-family: Lato;
   font-size: 15px;
   color: #373D3F;
-  counter-reset: h2;
-}
-
-h2 {
-  counter-reset: h3;
-}
-
-h2::before {
-  counter-increment: h2;
-  content: counter(h2) ". ";
-}
-
-h3::before {
-  counter-increment: h3;
-  content: counter(h2) "." counter(h3) " ";
 }
 
 pre code {
@@ -55,7 +40,45 @@ details summary > * {
 :root {
   counter-reset: question figure;
 }
+/* ---- Section Numbering ---- */
 
+/* Reset top-level counter */
+body {
+  counter-reset: h1;
+}
+
+/* H1 */
+h1 {
+  counter-reset: h2;
+}
+h1::before {
+  counter-increment: h1;
+  content: counter(h1) ". ";
+}
+
+/* H2 */
+h2 {
+  counter-reset: h3;
+}
+h2::before {
+  counter-increment: h2;
+  content: counter(h1) "." counter(h2) " ";
+}
+
+/* H3 */
+h3 {
+  counter-reset: h4;
+}
+h3::before {
+  counter-increment: h3;
+  content: counter(h1) "." counter(h2) "." counter(h3) " ";
+}
+
+/* H4 (optional) */
+h4::before {
+  counter-increment: h4;
+  content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) " ";
+}
 
 /*---- Boxes ---- */
 /* at the moment all have same colour, but this can be adjusted in the future */
