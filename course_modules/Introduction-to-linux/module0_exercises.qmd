@@ -1,6 +1,7 @@
 ---
 title: "Exercises"
 format: html
+number-sections: true
 ---
 
 ### Introduction
