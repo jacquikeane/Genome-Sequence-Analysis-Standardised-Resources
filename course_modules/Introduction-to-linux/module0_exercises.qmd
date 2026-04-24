@@ -2,6 +2,7 @@
 title: "Exercises"
 format: html
 number-sections: true
+number-depth: 3
 ---
 
 ### Introduction
